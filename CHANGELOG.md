@@ -60,7 +60,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - `/research-deep [topic]` — vault-first: scans vault, identifies gaps, fills only those, synthesizes a delta report, propagates updates via `/obsidian-save` (Perplexity sonar-reasoning-pro + Grok + vault scan).
   - `/youtube [url]` — transcript + metadata + top comments, summarized AI-first (youtube-transcript-api + YouTube Data API v3 + Grok-4).
 - Section 0 of `_CLAUDE.md` template — first version of the AI-first vault rule, applied to all 5 research commands from day one.
-- API key handling at `~/.config/obsidian-second-brain/.env` (Mac-local, never synced).
+- API key handling at `~/.config/ces-second-brain/.env` (Mac-local, never synced).
 - `pyproject.toml` + `uv.lock` for Python dependency management.
 - Auto-open behavior: every research save pops Obsidian to the new note via `obsidian://open?...`.
 
@@ -69,6 +69,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Command count went 26 → 31. Same install, same `_CLAUDE.md`.
 - Without API keys, the original 26 commands still work — research toolkit degrades gracefully.
 
-[Unreleased]: https://github.com/eugeniughelbur/obsidian-second-brain/compare/v0.6.0...HEAD
-[0.6.0]: https://github.com/eugeniughelbur/obsidian-second-brain/releases/tag/v0.6.0
-[0.5.0]: https://github.com/eugeniughelbur/obsidian-second-brain/releases/tag/v0.5.0
+[Unreleased]: https://github.com/andyluu98/ces-second-brain/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/andyluu98/ces-second-brain/releases/tag/v0.6.0
+[0.5.0]: https://github.com/andyluu98/ces-second-brain/releases/tag/v0.5.0

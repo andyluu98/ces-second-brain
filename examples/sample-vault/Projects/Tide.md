@@ -13,7 +13,7 @@ ai-first: true
 
 ## For future Claude
 
-Tide is a personal-project SaaS owned by [[people/Alex Rivera]]. Status: active as of 2026-04-27. Currently mid-rebuild of the retention/streaks system, which is the main feature users pay for. The Overview section explains what it is. Recent Activity captures the last 30 days. Key Decisions documents major directional choices with rationale. Everything in this note is fictional content for the obsidian-second-brain examples folder.
+Tide is a personal-project SaaS owned by [[people/Alex Rivera]]. Status: active as of 2026-04-27. Currently mid-rebuild of the retention/streaks system, which is the main feature users pay for. The Overview section explains what it is. Recent Activity captures the last 30 days. Key Decisions documents major directional choices with rationale. Everything in this note is fictional content for the ces-second-brain examples folder.
 
 ## Overview
 

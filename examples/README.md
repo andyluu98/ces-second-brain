@@ -1,6 +1,6 @@
 # Sample vault
 
-This folder shows what an obsidian-second-brain vault looks like in practice. Every note inside `sample-vault/` follows the AI-first rule defined in [`references/ai-first-rules.md`](../references/ai-first-rules.md).
+This folder shows what an ces-second-brain vault looks like in practice. Every note inside `sample-vault/` follows the AI-first rule defined in [`references/ai-first-rules.md`](../references/ai-first-rules.md).
 
 If you are evaluating the skill, browse the files here before installing. If you are contributing a new command, match the structure shown in the note type closest to your output.
 

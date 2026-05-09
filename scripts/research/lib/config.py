@@ -1,10 +1,10 @@
-"""Loads research-toolkit credentials and model defaults from ~/.config/obsidian-second-brain/.env"""
+"""Loads research-toolkit credentials and model defaults from ~/.config/ces-second-brain/.env"""
 
 from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-CONFIG_DIR = Path.home() / ".config" / "obsidian-second-brain"
+CONFIG_DIR = Path.home() / ".config" / "ces-second-brain"
 ENV_PATH = CONFIG_DIR / ".env"
 
 load_dotenv(ENV_PATH)
@@ -16,7 +16,7 @@ def get_required(name: str) -> str:
         raise SystemExit(
             f"\n{name} not configured.\n"
             f"Add it to {ENV_PATH}\n"
-            f"Or run install.sh from the obsidian-second-brain repo to set it up.\n"
+            f"Or run install.sh from the ces-second-brain repo to set it up.\n"
         )
     return val
 

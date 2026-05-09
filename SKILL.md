@@ -1,5 +1,5 @@
 ---
-name: obsidian-second-brain
+name: ces-second-brain
 description: >
   Operate any Obsidian vault as a living, self-rewriting second brain (an evolution
   of Karpathy's LLM Wiki pattern: sources rewrite existing pages, contradictions
@@ -65,7 +65,7 @@ Scan the structure to understand: folder names, template locations, naming conve
 If the user has no vault yet, run:
 ```bash
 # One-line install + bootstrap (asks 3 questions: vault path, your name, preset)
-curl -sL https://raw.githubusercontent.com/eugeniughelbur/obsidian-second-brain/main/scripts/quick-install.sh | bash
+curl -sL https://raw.githubusercontent.com/andyluu98/ces-second-brain/main/scripts/quick-install.sh | bash
 
 # Or manual:
 python scripts/bootstrap_vault.py --path ~/path/to/vault --name "Your Name"
@@ -779,7 +779,7 @@ Can also be triggered automatically by `/obsidian-graduate`, `/obsidian-health` 
 
 Five commands that pull external knowledge into the vault — X posts, X discourse, web research with citations, and YouTube videos. All output AI-first notes per the vault's Section 0 rule (preamble, rich frontmatter, recency markers, mandatory wikilinks, sources verbatim).
 
-**Setup:** API keys live at `~/.config/obsidian-second-brain/.env`. Run `install.sh` and answer "y" to the research toolkit prompt, or copy `.env.example` manually. xAI Grok and Perplexity keys are required; YouTube key is optional (transcripts work without it).
+**Setup:** API keys live at `~/.config/ces-second-brain/.env`. Run `install.sh` and answer "y" to the research toolkit prompt, or copy `.env.example` manually. xAI Grok and Perplexity keys are required; YouTube key is optional (transcripts work without it).
 
 **Stack:** Python 3.10+ with `uv`. Install deps via `uv sync` from the repo root.
 
@@ -1026,7 +1026,7 @@ A background agent that fires automatically whenever Claude compacts the convers
 
 1. Make the hook script executable (one-time):
    ```bash
-   chmod +x ~/.claude/skills/obsidian-second-brain/hooks/obsidian-bg-agent.sh
+   chmod +x ~/.claude/skills/ces-second-brain/hooks/obsidian-bg-agent.sh
    ```
 
 2. Set `OBSIDIAN_VAULT_PATH` in `~/.claude/settings.json`:
@@ -1048,7 +1048,7 @@ A background agent that fires automatically whenever Claude compacts the convers
            "hooks": [
              {
                "type": "command",
-               "command": "/Users/you/.claude/skills/obsidian-second-brain/hooks/obsidian-bg-agent.sh",
+               "command": "/Users/you/.claude/skills/ces-second-brain/hooks/obsidian-bg-agent.sh",
                "timeout": 10,
                "async": true
              }

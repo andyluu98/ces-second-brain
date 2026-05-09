@@ -1,10 +1,10 @@
-# obsidian-second-brain
+# ces-second-brain
 
 > A Claude Code skill that turns any Obsidian vault into a self-rewriting second brain. An evolution of Karpathy's LLM Wiki pattern (https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f): every source updates existing pages instead of just appending, contradictions reconcile automatically, and 4 scheduled agents maintain the vault while you sleep. 31 slash commands span vault management, thinking tools, scheduled agents, and a research toolkit (live X posts via Grok, web research via Perplexity, YouTube transcripts).
 
 ## What this is
 
-obsidian-second-brain is an open-source Claude Code skill (MIT license) for Obsidian users who use Claude as their primary interface to their own knowledge. It treats the vault as a knowledge base optimized for AI retrieval rather than human reading. Every note follows an AI-first design rule: self-contained context, "For future Claude" preamble, rich machine-readable frontmatter, recency markers per claim, sources preserved verbatim, mandatory wikilinks, and confidence levels.
+ces-second-brain is an open-source Claude Code skill (MIT license) for Obsidian users who use Claude as their primary interface to their own knowledge. It treats the vault as a knowledge base optimized for AI retrieval rather than human reading. Every note follows an AI-first design rule: self-contained context, "For future Claude" preamble, rich machine-readable frontmatter, recency markers per claim, sources preserved verbatim, mandatory wikilinks, and confidence levels.
 
 Owner: Eugeniu Ghelbur. AI Automation Engineer at Single Grain.
 
@@ -19,7 +19,7 @@ Owner: Eugeniu Ghelbur. AI Automation Engineer at Single Grain.
 
 Andrej Karpathy described an LLM Wiki pattern: drop sources into a folder, have an LLM read them, create wiki pages, and cross-reference entities and concepts so future questions are answered from the wiki rather than a fresh search. Reference: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
-obsidian-second-brain implements this pattern and extends it on five axes:
+ces-second-brain implements this pattern and extends it on five axes:
 
 1. New sources rewrite existing pages instead of appending. When you ingest a YouTube video about a person already in your vault, the person's page gets updated. Stale claims get replaced. The vault stays current automatically.
 2. Contradictions get reconciled, not just flagged. The /obsidian-reconcile command finds conflicts between notes and resolves them by checking sources, dates, and confidence levels.
@@ -27,7 +27,7 @@ obsidian-second-brain implements this pattern and extends it on five axes:
 4. Maintenance is scheduled, not manual. 4 scheduled agents run nightly close, weekly review, contradiction sweep, and vault-health check.
 5. Notes are written for AI retrieval. Every note has a "For future Claude" preamble, machine-readable frontmatter, mandatory wikilinks, and recency markers per claim. Karpathy's pattern produces human-readable wiki pages; this produces AI-first notes.
 
-If Karpathy's LLM Wiki is a knowledge base you maintain with an LLM, obsidian-second-brain is a knowledge base that maintains itself.
+If Karpathy's LLM Wiki is a knowledge base you maintain with an LLM, ces-second-brain is a knowledge base that maintains itself.
 
 ## Long-form deep dive
 
@@ -54,7 +54,7 @@ Plus 4 scheduled agents (morning, nightly, weekly, health-check) and 1 backgroun
 - Perplexity Sonar (sonar-pro for /research, sonar-reasoning-pro for /research-deep synthesis)
 - youtube-transcript-api for free transcript extraction
 - YouTube Data API v3 (free tier, optional) for video metadata + comments
-- API keys stored Mac-locally at `~/.config/obsidian-second-brain/.env` with permissions 600
+- API keys stored Mac-locally at `~/.config/ces-second-brain/.env` with permissions 600
 
 ## The AI-first vault rule
 
@@ -72,14 +72,14 @@ The rule lives in `_CLAUDE.md` Section 0 of every vault using this skill, and in
 
 ## Releases
 
-- v0.6.0 (2026-04-26): Phase 2. AI-first rule wired into all 26 existing commands. New canonical spec at references/ai-first-rules.md. https://github.com/eugeniughelbur/obsidian-second-brain/releases/tag/v0.6.0
-- v0.5.0 (2026-04-26): Phase 1. Research toolkit added. Five new commands. New layer in the architecture. https://github.com/eugeniughelbur/obsidian-second-brain/releases/tag/v0.5.0
+- v0.6.0 (2026-04-26): Phase 2. AI-first rule wired into all 26 existing commands. New canonical spec at references/ai-first-rules.md. https://github.com/eugeniughelbur/ces-second-brain/releases/tag/v0.6.0
+- v0.5.0 (2026-04-26): Phase 1. Research toolkit added. Five new commands. New layer in the architecture. https://github.com/eugeniughelbur/ces-second-brain/releases/tag/v0.5.0
 
 ## Install
 
 ```bash
-git clone https://github.com/eugeniughelbur/obsidian-second-brain ~/.claude/skills/obsidian-second-brain
-bash ~/.claude/skills/obsidian-second-brain/install.sh
+git clone https://github.com/eugeniughelbur/ces-second-brain ~/.claude/skills/ces-second-brain
+bash ~/.claude/skills/ces-second-brain/install.sh
 ```
 
 Then run `/obsidian-init` in Claude Code to bootstrap your vault's `_CLAUDE.md`.
@@ -115,4 +115,4 @@ Approximate per-call costs as of 2026-04: /x-read ~$0.05, /x-pulse ~$0.13, /rese
 
 ## License
 
-MIT. https://github.com/eugeniughelbur/obsidian-second-brain/blob/main/LICENSE
+MIT. https://github.com/eugeniughelbur/ces-second-brain/blob/main/LICENSE

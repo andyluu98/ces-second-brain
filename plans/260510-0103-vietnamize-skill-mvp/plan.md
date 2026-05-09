@@ -1,4 +1,4 @@
-# Plan: Việt hóa obsidian-second-brain (MVP)
+# Plan: Việt hóa ces-second-brain (MVP)
 
 **Date:** 2026-05-10
 **Branch:** main

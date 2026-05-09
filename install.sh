@@ -6,10 +6,10 @@ SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CLAUDE_DIR="$HOME/.claude"
 COMMANDS_DIR="$CLAUDE_DIR/commands"
 SKILLS_DIR="$CLAUDE_DIR/skills"
-CONFIG_DIR="$HOME/.config/obsidian-second-brain"
+CONFIG_DIR="$HOME/.config/ces-second-brain"
 ENV_FILE="$CONFIG_DIR/.env"
 
-echo "Installing obsidian-second-brain..."
+echo "Installing ces-second-brain..."
 
 # Create directories if needed
 mkdir -p "$COMMANDS_DIR"
@@ -29,7 +29,7 @@ for file in "$SKILL_DIR/commands/"*.md; do
 done
 
 # Link skill into ~/.claude/skills/
-SKILL_LINK="$SKILLS_DIR/obsidian-second-brain"
+SKILL_LINK="$SKILLS_DIR/ces-second-brain"
 if [ -e "$SKILL_LINK" ]; then
   echo "Skill already linked at $SKILL_LINK"
 else

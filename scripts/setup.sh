@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# setup.sh — obsidian-second-brain one-command installer
+# setup.sh — ces-second-brain one-command installer
 #
 # Usage:
-#   bash ~/.claude/skills/obsidian-second-brain/scripts/setup.sh "/path/to/your/vault"
+#   bash ~/.claude/skills/ces-second-brain/scripts/setup.sh "/path/to/your/vault"
 #
 # What it does:
 #   1. Validates the vault path
@@ -43,7 +43,7 @@ if [[ ! -d "$VAULT" ]]; then
 fi
 
 echo ""
-echo "obsidian-second-brain setup"
+echo "ces-second-brain setup"
 echo "==========================="
 echo "Vault: $VAULT"
 echo "Skill: $SKILL_DIR"

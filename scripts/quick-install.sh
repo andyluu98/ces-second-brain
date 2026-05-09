@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# quick-install.sh — one-liner installer for obsidian-second-brain
+# quick-install.sh — one-liner installer for ces-second-brain
 #
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/andyluu98/ces-second-brain/main/scripts/quick-install.sh | bash
 #
 # What it does:
-#   1. Clones the repo to ~/.claude/skills/obsidian-second-brain (or pulls if it exists)
+#   1. Clones the repo to ~/.claude/skills/ces-second-brain (or pulls if it exists)
 #   2. Prompts for the vault path
 #   3. Runs scripts/setup.sh with that path
 #
 # Environment:
 #   OBSIDIAN_VAULT_PATH — skip the prompt and use this path
-#   SKILL_DIR           — override the install location (default: ~/.claude/skills/obsidian-second-brain)
+#   SKILL_DIR           — override the install location (default: ~/.claude/skills/ces-second-brain)
 
 set -euo pipefail
 

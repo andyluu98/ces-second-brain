@@ -2,7 +2,7 @@
 description: Quét vault và tạo _CLAUDE.md (sổ tay vận hành), index.md (mục lục), log.md (nhật ký)
 ---
 
-Use the obsidian-second-brain skill. Execute `/obsidian-init`:
+Use the ces-second-brain skill. Execute `/obsidian-init`:
 
 1. Call `list_files_in_vault()` to map the full vault structure
 2. Spawn parallel subagents to discover vault context simultaneously:
@@ -11,7 +11,7 @@ Use the obsidian-second-brain skill. Execute `/obsidian-init`:
    - **Boards agent**: read all files in `Boards/`
    - **Samples agent**: read one existing note per major folder to capture naming conventions and frontmatter patterns
 3. Merge all agent results into a complete picture of the vault
-4. Generate a complete `_CLAUDE.md` using the template in `~/.claude/skills/obsidian-second-brain/references/claude-md-template.md`, filled with real values from the vault
+4. Generate a complete `_CLAUDE.md` using the template in `~/.claude/skills/ces-second-brain/references/claude-md-template.md`, filled with real values from the vault
 5. Generate `index.md` at the vault root — a catalog of all pages organized by category:
    - List every note in the vault grouped by folder (Projects, People, Ideas, etc.)
    - Include a one-line description for each note (from frontmatter or first paragraph)
@@ -44,6 +44,6 @@ If `log.md` already exists: do NOT overwrite — only append the init entry.
 - Tag values dùng tiếng Việt không dấu, kebab-case (vd: `quyet-dinh`, `du-an`, `nguoi`, `y-tuong`, `bai-hoc`).
 - Preamble dùng `## Cho Claude tương lai` thay cho `## For future Claude`.
 - Recency marker dạng VN: `(tính đến 2026-05, source.com)` thay cho `(as of 2026-05, source.com)`.
-- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`obsidian-second-brain`).
+- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`ces-second-brain`).
 - Khi tạo wikilink mới: tên hiển thị có thể VN (vd: `[[Anh Minh]]`, `[[Dự án X]]`).
 - Status values khi tạo mới: vẫn dùng giá trị chuẩn (`active`, `planning`, `completed`, `archived`, `on-hold`) để tương thích Dataview.

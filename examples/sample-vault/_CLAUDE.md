@@ -6,7 +6,7 @@ This is a sample vault belonging to the fictional **Alex Rivera**. The structure
 
 ## Section 0 — AI-first rule (non-negotiable)
 
-This vault is for **future-Claude**, not human reading. Every note Claude writes or updates must follow [`references/ai-first-rules.md`](https://github.com/eugeniughelbur/obsidian-second-brain/blob/main/references/ai-first-rules.md):
+This vault is for **future-Claude**, not human reading. Every note Claude writes or updates must follow [`references/ai-first-rules.md`](https://github.com/andyluu98/ces-second-brain/blob/main/references/ai-first-rules.md):
 
 1. Self-contained context (no "see above")
 2. `## For future Claude` preamble after frontmatter

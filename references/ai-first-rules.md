@@ -2,7 +2,7 @@
 
 The vault is designed for **future-Claude** to read and reason over, not for human review. The owner rarely opens notes directly — they call Claude to retrieve, synthesize, and connect dots across years of accumulated knowledge. **Every command that writes to the vault must produce notes that follow these rules.**
 
-This document is the canonical specification. It lives at `references/ai-first-rules.md` in the obsidian-second-brain repo and is referenced from `_CLAUDE.md` Section 0, every slash command, and `references/write-rules.md`.
+This document is the canonical specification. It lives at `references/ai-first-rules.md` in the ces-second-brain repo and is referenced from `_CLAUDE.md` Section 0, every slash command, and `references/write-rules.md`.
 
 ---
 
@@ -284,4 +284,4 @@ When auditing an existing note (Phase 2 work or one-off cleanup), verify:
 
 ## Migration Note
 
-This rule was established 2026-04-25 and shipped as part of obsidian-second-brain v0.5.0 (Research Toolkit). All 5 research commands (`/x-read`, `/x-pulse`, `/research`, `/research-deep`, `/youtube`) follow it from day one. The 26 existing `/obsidian-*` commands were updated in v0.6.0 (Phase 2) to explicitly reference this document. Notes written before that may not yet meet the standard — `/obsidian-health` flags them.
+This rule was established 2026-04-25 and shipped as part of ces-second-brain v0.5.0 (Research Toolkit). All 5 research commands (`/x-read`, `/x-pulse`, `/research`, `/research-deep`, `/youtube`) follow it from day one. The 26 existing `/obsidian-*` commands were updated in v0.6.0 (Phase 2) to explicitly reference this document. Notes written before that may not yet meet the standard — `/obsidian-health` flags them.

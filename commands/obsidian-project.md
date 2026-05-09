@@ -2,7 +2,7 @@
 description: Tạo hoặc cập nhật project note — tự thêm vào kanban và daily note
 ---
 
-Use the obsidian-second-brain skill. Execute `/obsidian-project $ARGUMENTS`:
+Use the ces-second-brain skill. Execute `/obsidian-project $ARGUMENTS`:
 
 The argument is a project name. Handle typos and partial matches.
 
@@ -31,6 +31,6 @@ If the name has a typo or is approximate, search the vault, show what was found,
 - Tag values dùng tiếng Việt không dấu, kebab-case (vd: `quyet-dinh`, `du-an`, `nguoi`, `y-tuong`, `bai-hoc`).
 - Preamble dùng `## Cho Claude tương lai` thay cho `## For future Claude`.
 - Recency marker dạng VN: `(tính đến 2026-05, source.com)` thay cho `(as of 2026-05, source.com)`.
-- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`obsidian-second-brain`).
+- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`ces-second-brain`).
 - Khi tạo wikilink mới: tên hiển thị có thể VN (vd: `[[Anh Minh]]`, `[[Dự án X]]`).
 - Status values khi tạo mới: vẫn dùng giá trị chuẩn (`active`, `planning`, `completed`, `archived`, `on-hold`) để tương thích Dataview.

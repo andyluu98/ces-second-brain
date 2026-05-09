@@ -2,11 +2,11 @@
 description: Nghiên cứu sâu ưu tiên vault — quét vault, tìm thiếu sót, lấp qua Perplexity + Grok, tổng hợp delta, lan tỏa cập nhật khắp People/Projects/Ideas qua /obsidian-save
 ---
 
-Use the obsidian-second-brain skill. Execute `/research-deep [topic]`:
+Use the ces-second-brain skill. Execute `/research-deep [topic]`:
 
 1. Resolve the topic from the user's argument. If no topic, ask: "What topic for deep research?"
 
-2. Run the Python command from the repo root (`~/Projects/personal/obsidian-second-brain/`):
+2. Run the Python command from the repo root (`~/Projects/personal/ces-second-brain/`):
    ```bash
    uv run -m scripts.research.research_deep "<topic>"
    ```
@@ -54,6 +54,6 @@ Use the obsidian-second-brain skill. Execute `/research-deep [topic]`:
 - Tag values dùng tiếng Việt không dấu, kebab-case (vd: `quyet-dinh`, `du-an`, `nguoi`, `y-tuong`, `bai-hoc`).
 - Preamble dùng `## Cho Claude tương lai` thay cho `## For future Claude`.
 - Recency marker dạng VN: `(tính đến 2026-05, source.com)` thay cho `(as of 2026-05, source.com)`.
-- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`obsidian-second-brain`).
+- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`ces-second-brain`).
 - Khi tạo wikilink mới: tên hiển thị có thể VN (vd: `[[Anh Minh]]`, `[[Dự án X]]`).
 - Status values khi tạo mới: vẫn dùng giá trị chuẩn (`active`, `planning`, `completed`, `archived`, `on-hold`) để tương thích Dataview.

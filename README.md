@@ -1,24 +1,15 @@
-<p align="center">
-  <a href="https://github.com/andyluu98/ces-second-brain">
-    <img src="media/banner.png" alt="obsidian-second-brain — biến vault Obsidian thành second brain AI tự cập nhật" width="100%" />
-  </a>
-</p>
-
-<h1 align="center">obsidian-second-brain (bản tiếng Việt)</h1>
+<h1 align="center">ces second brain</h1>
 
 <p align="center">
-  <strong>Vault Obsidian biết tự viết lại chính nó.</strong><br/>
+  <strong>Second brain AI cá nhân — vault Obsidian tự cập nhật qua Claude Desktop.</strong><br/><br/>
   <em>Mỗi nguồn mới CẬP NHẬT các trang đã có thay vì chỉ thêm trang mới. Mâu thuẫn tự hòa giải. Vault thông minh hơn trong khi bạn ngủ.</em><br/><br/>
-  <em>31 lệnh · auto-tổng hợp · công cụ tư duy biết phản biện bạn · research live từ X, web, YouTube · 4 agent định kỳ · 4 preset</em>
+  <em>31 lệnh tiếng Việt · auto-tổng hợp · công cụ tư duy phản biện · research live từ X / web / YouTube · 4 agent định kỳ · 4 preset</em>
 </p>
 
 <p align="center">
   <a href="docs/HUONG-DAN-CAI-DAT.md"><strong>Hướng dẫn cài đặt</strong></a> ·
-  <a href="docs/PHRASEBOOK-VN.md"><strong>Phrasebook (cách nói lệnh)</strong></a> ·
-  <a href="README-en.md">English README (upstream original)</a>
+  <a href="docs/PHRASEBOOK-VN.md"><strong>Phrasebook (cách nói lệnh)</strong></a>
 </p>
-
-> **Đây là bản dịch tiếng Việt** của [obsidian-second-brain](https://github.com/eugeniughelbur/obsidian-second-brain). Skill gốc bằng tiếng Anh; bản này việt hóa **mô tả 31 slash commands** và thêm **chỉ thị "trả lời + ghi note bằng tiếng Việt"** vào mỗi command. Code và logic vẫn nguyên upstream.
 
 ---
 
@@ -30,23 +21,23 @@ Bạn ghi chú trong Obsidian. Hàng trăm file. Chúng nằm im. Bạn ra cùng
 
 **Hai công cụ mạnh. Hoàn toàn rời rạc.**
 
-Skill này nối chúng lại.
+ces second brain nối chúng lại.
 
 ---
 
-## Skill này làm gì
+## Làm gì
 
-| Lúc | Làm gì | Bạn được gì |
+| Lúc | Làm gì | Kết quả |
 |---|---|---|
 | Sau cuộc họp | `/obsidian-save` | Mọi quyết định/người/task/ý tưởng tự lưu đúng nơi |
-| Có voice memo | `/obsidian-ingest meeting.m4a` | Whisper transcribe → tách từng promise/action item → phân phối khắp vault |
-| Chụp whiteboard | `/obsidian-ingest photo.png` | Đọc ảnh → tạo concept notes → liên kết project liên quan |
-| Có video hay | `/obsidian-ingest https://youtube.com/...` | Vault TỰ VIẾT LẠI — entity được cập nhật, mâu thuẫn được giải quyết |
-| Trước quyết định lớn | `/obsidian-challenge` | Vault tìm thất bại quá khứ trên cùng chủ đề và phản biện bằng chính lời bạn |
+| Có voice memo | `/obsidian-ingest meeting.m4a` | Whisper transcribe → tách từng promise/action → phân phối khắp vault |
+| Chụp whiteboard | `/obsidian-ingest photo.png` | Đọc ảnh → tạo concept notes → liên kết project |
+| Có video hay | `/obsidian-ingest https://youtube.com/...` | Vault TỰ VIẾT LẠI — entity cập nhật, mâu thuẫn giải quyết |
+| Trước quyết định lớn | `/obsidian-challenge` | Vault tìm thất bại quá khứ và phản biện bằng chính lời bạn |
 | Bắt đầu ngày mới | `/obsidian-daily` | Lịch + việc trễ + thay đổi qua đêm vào note hôm nay |
-| Đi ngủ | (auto) | Agent đêm chạy 5 pha — đóng ngày, hòa giải mâu thuẫn, tổng hợp pattern, chữa orphan, build lại index |
-| Đọc post X | `/x-read [url]` | Grok truy cập live → post + thread + sentiment + voices đáng theo dõi |
-| Cần research | `/research [topic]` | Perplexity Sonar Pro → báo cáo có trích dẫn, recency markers |
+| Đi ngủ | (auto) | Agent đêm chạy 5 pha — đóng ngày, hòa giải, tổng hợp, chữa orphan, build index |
+| Đọc post X | `/x-read [url]` | Grok live → post + thread + sentiment + voices đáng theo dõi |
+| Cần research | `/research [topic]` | Perplexity Sonar Pro → báo cáo có trích dẫn |
 | Research sâu | `/research-deep [topic]` | Quét vault trước → chỉ lấp khoảng trống → cập nhật toàn vault |
 
 **Bạn không bao giờ phải mở Obsidian.** Mọi thứ qua Claude.
@@ -135,15 +126,24 @@ Cần API key (xAI Grok + Perplexity + YouTube tùy chọn). Kết quả lưu v�
 
 ## Cài đặt
 
-**Người dùng phổ thông VN:** xem **[docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)** — hướng dẫn từng bước có ảnh, không cần biết tech.
+**Người dùng phổ thông:** xem **[docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)** — hướng dẫn từng bước, không cần biết tech.
 
-**Power user:** một dòng (giống bản EN):
+**Power user:** một dòng:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/andyluu98/ces-second-brain/main/scripts/quick-install.sh | bash
 ```
 
-Sau đó: `/obsidian-init`
+Hoặc clone thủ công:
+
+```bash
+git clone https://github.com/andyluu98/ces-second-brain ~/.claude/skills/ces-second-brain
+cd ~/.claude/skills/ces-second-brain
+python scripts/apply_vn_descriptions.py
+cp commands/*.md ~/.claude/commands/
+```
+
+Sau đó: mở Claude Desktop, gõ `/obsidian-init`.
 
 ---
 
@@ -151,9 +151,9 @@ Sau đó: `/obsidian-init`
 
 Trên Claude Desktop, gõ `/` để mở menu skill → chọn lệnh muốn chạy → menu hiển thị mô tả tiếng Việt.
 
-Nếu không nhớ tên lệnh, dùng [PHRASEBOOK-VN](docs/PHRASEBOOK-VN.md) — danh sách câu nói tự nhiên VN tương ứng từng lệnh.
+Nếu không nhớ tên lệnh, dùng [Phrasebook](docs/PHRASEBOOK-VN.md) — danh sách câu nói tự nhiên VN tương ứng từng lệnh.
 
-Ví dụ: thay vì nhớ `/obsidian-save`, bạn có thể chỉ cần nói:
+Ví dụ: thay vì nhớ `/obsidian-save`, có thể chỉ cần nói:
 > "Lưu cuộc trò chuyện này vào vault giúp tôi"
 
 Claude tự hiểu và chạy lệnh tương ứng.
@@ -164,7 +164,7 @@ Claude tự hiểu và chạy lệnh tương ứng.
 
 Vault truyền thống là tủ hồ sơ. Bạn bỏ vào. Nó nằm im.
 
-Vault này tự viết lại với mỗi input:
+ces second brain biến vault thành cỗ máy tự viết lại với mỗi input:
 
 - **Nạp nguồn** → trang đã có được viết lại, mâu thuẫn được giải quyết, pattern được tổng hợp
 - **Lưu cuộc trò chuyện** → entity, concept, decision phân phối khắp vault
@@ -198,15 +198,16 @@ Không chọn preset → vault general-purpose.
 Không cho 26 lệnh chính. Chỉ 5 lệnh research cần (xAI, Perplexity, YouTube tùy chọn). Không có key thì 5 lệnh đó tự degrade — show thông báo, không vỡ.
 
 **Có chạy trên Windows/Linux được không?**
-Vault commands chạy mọi nơi Claude chạy. Research toolkit test trên macOS — Windows/Linux có thể cần điều chỉnh.
+Vault commands chạy mọi nơi Claude chạy. Research toolkit có thể cần điều chỉnh path trên Windows.
 
 **Có an toàn cho vault hiện có không?**
-Có. Skill không bao giờ xóa hay sửa note theo cách phá hoại nếu chưa xác nhận. Note cũ giữ nguyên. Note mới theo AI-first. `/obsidian-health` đánh dấu note tiền-AI-first để bạn cập nhật theo lịch của mình.
+Có. ces second brain không bao giờ xóa hay sửa note theo cách phá hoại nếu chưa xác nhận. Note cũ giữ nguyên. Note mới theo AI-first. `/obsidian-health` đánh dấu note tiền-AI-first để bạn cập nhật theo lịch của mình.
 
 **Khác Notion AI / Mem chỗ nào?**
-Notion AI và Mem là SaaS đóng — họ giữ data. Skill này lưu mọi thứ vào markdown local trong vault Obsidian, không vendor lock-in. AI ở **trên** data, không ở **sau** data.
+Notion AI và Mem là SaaS đóng — họ giữ data. ces second brain lưu mọi thứ vào markdown local trong vault Obsidian, không vendor lock-in. AI ở **trên** data, không ở **sau** data.
 
-Đầy đủ FAQ: xem README EN gốc.
+**Có chạy offline không?**
+Không. Claude API yêu cầu internet. Chỉ vault thì local.
 
 ---
 
@@ -214,20 +215,14 @@ Notion AI và Mem là SaaS đóng — họ giữ data. Skill này lưu mọi th�
 
 Hầu hết công cụ second brain biến bạn thành lao công.
 
-Skill này đảo ngược. Bạn nghĩ, làm, nói. Claude lo memory. Rồi nó dùng memory đó để giúp bạn nghĩ tốt hơn — bề mặt cái bạn sẽ bỏ sót, phản biện cái bạn sẽ giả định, kết nối cái bạn sẽ không bao giờ link, tổng hợp pattern bạn không yêu cầu.
+ces second brain đảo ngược. Bạn nghĩ, làm, nói. Claude lo memory. Rồi nó dùng memory đó để giúp bạn nghĩ tốt hơn — bề mặt cái bạn sẽ bỏ sót, phản biện cái bạn sẽ giả định, kết nối cái bạn sẽ không bao giờ link, tổng hợp pattern bạn không yêu cầu.
 
 Vault không lớn lên. Nó tiến hóa.
 
 **Note của bạn là moat của bạn.**
-
-Lấy cảm hứng từ [LLM-Wiki của Andrey Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
 ---
 
 ## License
 
 MIT — xem [LICENSE](LICENSE)
-
-## Tác giả gốc
-
-[Eugeniu Ghelbur](https://github.com/eugeniughelbur) — AI Automation Engineer @ Single Grain

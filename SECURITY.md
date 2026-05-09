@@ -1,6 +1,6 @@
 # Security policy
 
-Thanks for helping keep obsidian-second-brain and its users safe.
+Thanks for helping keep ces-second-brain and its users safe.
 
 ## Reporting a vulnerability
 

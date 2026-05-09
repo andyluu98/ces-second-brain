@@ -1,4 +1,4 @@
-# Contributing to obsidian-second-brain
+# Contributing to ces-second-brain
 
 Thanks for your interest in contributing! This skill exists because the people who use it keep making it better. Whether you're filing a bug, requesting a feature, or shipping a new command, you're welcome here.
 
@@ -9,8 +9,8 @@ This guide explains **how to contribute** so your work lands fast.
 ## Before you start
 
 1. **Be respectful.** This project follows a [Code of Conduct](CODE_OF_CONDUCT.md). Disagreement is welcome; rudeness is not.
-2. **Search first.** Check [open issues](https://github.com/eugeniughelbur/obsidian-second-brain/issues) and [discussions](https://github.com/eugeniughelbur/obsidian-second-brain/discussions). Someone may already be working on what you're proposing.
-3. **For ideas / questions / "what if..."**, prefer [Discussions](https://github.com/eugeniughelbur/obsidian-second-brain/discussions). Issues are for concrete bugs or feature proposals.
+2. **Search first.** Check [open issues](https://github.com/andyluu98/ces-second-brain/issues) and [discussions](https://github.com/andyluu98/ces-second-brain/discussions). Someone may already be working on what you're proposing.
+3. **For ideas / questions / "what if..."**, prefer [Discussions](https://github.com/andyluu98/ces-second-brain/discussions). Issues are for concrete bugs or feature proposals.
 
 ---
 
@@ -19,8 +19,8 @@ This guide explains **how to contribute** so your work lands fast.
 - 📜 [AI-first vault rule](references/ai-first-rules.md) — required reading before adding any command that writes to the vault
 - 📖 [SKILL.md](SKILL.md) — the operating manual for Claude
 - 🏗 [architecture.md](architecture.md) — how the layers fit together
-- 🐛 [Bug report form](https://github.com/eugeniughelbur/obsidian-second-brain/issues/new?template=bug_report.yml)
-- ✨ [Feature request form](https://github.com/eugeniughelbur/obsidian-second-brain/issues/new?template=feature_request.yml)
+- 🐛 [Bug report form](https://github.com/andyluu98/ces-second-brain/issues/new?template=bug_report.yml)
+- ✨ [Feature request form](https://github.com/andyluu98/ces-second-brain/issues/new?template=feature_request.yml)
 
 ---
 
@@ -28,20 +28,20 @@ This guide explains **how to contribute** so your work lands fast.
 
 ```bash
 # Clone the repo
-git clone https://github.com/eugeniughelbur/obsidian-second-brain ~/Projects/obsidian-second-brain
-cd ~/Projects/obsidian-second-brain
+git clone https://github.com/andyluu98/ces-second-brain ~/Projects/ces-second-brain
+cd ~/Projects/ces-second-brain
 
 # Install Python deps via uv (auto-creates .venv)
 uv sync
 
 # Set up API keys for the research toolkit (optional — only needed if you're working on /x-read, /x-pulse, /research, /research-deep, or /youtube)
-mkdir -p ~/.config/obsidian-second-brain
-cp .env.example ~/.config/obsidian-second-brain/.env
-chmod 600 ~/.config/obsidian-second-brain/.env
+mkdir -p ~/.config/ces-second-brain
+cp .env.example ~/.config/ces-second-brain/.env
+chmod 600 ~/.config/ces-second-brain/.env
 # then paste your xAI / Perplexity / YouTube keys into the file
 
 # Link the skill into Claude Code (if you're testing slash commands)
-ln -s "$(pwd)" ~/.claude/skills/obsidian-second-brain
+ln -s "$(pwd)" ~/.claude/skills/ces-second-brain
 ln -s commands/* ~/.claude/commands/
 ```
 
@@ -185,9 +185,9 @@ uv run -m scripts.research.x_read "https://x.com/some/post"
 
 ## Getting help
 
-- **Questions about how to use a command:** [Discussions Q&A](https://github.com/eugeniughelbur/obsidian-second-brain/discussions/categories/q-a)
-- **Showcase your vault setup:** [Discussions Show & Tell](https://github.com/eugeniughelbur/obsidian-second-brain/discussions/categories/show-and-tell)
-- **Bugs:** [bug report form](https://github.com/eugeniughelbur/obsidian-second-brain/issues/new?template=bug_report.yml)
+- **Questions about how to use a command:** [Discussions Q&A](https://github.com/andyluu98/ces-second-brain/discussions/categories/q-a)
+- **Showcase your vault setup:** [Discussions Show & Tell](https://github.com/andyluu98/ces-second-brain/discussions/categories/show-and-tell)
+- **Bugs:** [bug report form](https://github.com/andyluu98/ces-second-brain/issues/new?template=bug_report.yml)
 - **Direct contact (private / security):** see [SECURITY.md](SECURITY.md) (when added) or DM [@eugeniu_ghelbur](https://x.com/eugeniu_ghelbur)
 
 ---

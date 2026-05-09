@@ -7,8 +7,8 @@ body:
     attributes:
       value: |
         Thanks for thinking about how to make this better. A few asks before you continue:
-        - Search [open issues + discussions](https://github.com/eugeniughelbur/obsidian-second-brain/issues) to see if it's already been proposed.
-        - For free-form ideas / "what if..." questions, prefer [Discussions](https://github.com/eugeniughelbur/obsidian-second-brain/discussions). Issues are for concrete proposals.
+        - Search [open issues + discussions](https://github.com/andyluu98/ces-second-brain/issues) to see if it's already been proposed.
+        - For free-form ideas / "what if..." questions, prefer [Discussions](https://github.com/andyluu98/ces-second-brain/discussions). Issues are for concrete proposals.
 
   - type: dropdown
     id: type

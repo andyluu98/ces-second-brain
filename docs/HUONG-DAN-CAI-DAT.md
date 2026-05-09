@@ -1,4 +1,4 @@
-# Hướng dẫn cài đặt obsidian-second-brain (cho người mới)
+# Hướng dẫn cài đặt ces second brain (cho người mới)
 
 > **Mục tiêu:** Sau khi đọc xong file này, bạn có thể gõ `/obsidian-save` trong Claude Desktop và Claude tự ghi cuộc trò chuyện vào vault Obsidian của bạn — bằng tiếng Việt.
 
@@ -17,7 +17,7 @@
 4. Cài Claude Desktop                   │
 5. Bật API trong Obsidian               │
 6. Config Claude Desktop nối vault    ──┘
-7. Cài skill obsidian-second-brain    ──┐  Cập nhật khi có version mới
+7. Cài skill ces second brain        ──┐  Cập nhật khi có version mới
 8. Bootstrap vault với /obsidian-init ──┘
 9. Bắt đầu dùng                       ──── Hằng ngày
 ```
@@ -153,7 +153,7 @@ Nếu **không** → check lại API key, port, đường dẫn JSON. Xem [Khắ
 
 ---
 
-## Bước 7 — Cài skill obsidian-second-brain
+## Bước 7 — Cài skill ces second brain
 
 ### Cách A — Tự động (khuyến nghị)
 
@@ -204,7 +204,7 @@ cp commands/*.md ~/.claude/commands/
 Bây giờ vault đang trống. Skill có script tạo cấu trúc folder, template, kanban tự động.
 
 ```bash
-cd ~/.claude/skills/obsidian-second-brain
+cd ~/.claude/skills/ces-second-brain
 python scripts/bootstrap_vault.py --path "DUONG_DAN_VAULT" --name "Tên Của Bạn" --preset PRESET
 ```
 
@@ -307,10 +307,10 @@ Một số máy reject self-signed cert. Trong plugin settings, bật chế đ�
 Cần 5 lệnh `/x-read`, `/x-pulse`, `/research`, `/research-deep`, `/youtube`? Cài thêm:
 
 ```bash
-cd ~/.claude/skills/obsidian-second-brain
-mkdir -p ~/.config/obsidian-second-brain
-cp .env.example ~/.config/obsidian-second-brain/.env
-chmod 600 ~/.config/obsidian-second-brain/.env  # Linux/macOS
+cd ~/.claude/skills/ces-second-brain
+mkdir -p ~/.config/ces-second-brain
+cp .env.example ~/.config/ces-second-brain/.env
+chmod 600 ~/.config/ces-second-brain/.env  # Linux/macOS
 ```
 
 Mở file `.env`, paste API key:
@@ -347,7 +347,7 @@ PostCompact hook tự cập nhật vault sau mỗi context compaction. Chỉ ch�
 ## Cập nhật skill
 
 ```bash
-cd ~/.claude/skills/obsidian-second-brain
+cd ~/.claude/skills/ces-second-brain
 git pull
 python scripts/apply_vn_descriptions.py  # áp lại bản dịch nếu có command mới
 ```
@@ -358,8 +358,7 @@ Restart Claude Desktop.
 
 ## Cần hỗ trợ?
 
-- Issue / bug bản tiếng Việt: https://github.com/andyluu98/ces-second-brain/issues
-- Issue / bug bản gốc EN: https://github.com/eugeniughelbur/obsidian-second-brain/issues
+- Issue / bug: https://github.com/andyluu98/ces-second-brain/issues
 - Phần dịch tiếng Việt có sai sót: tạo issue ở repo VN fork (nếu có) hoặc PR vào upstream
 - AI-first rule chi tiết: `references/ai-first-rules.md`
 - Vault schema chi tiết: `references/vault-schema.md`

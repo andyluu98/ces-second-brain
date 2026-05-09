@@ -7,8 +7,8 @@ body:
     attributes:
       value: |
         Thanks for taking the time to file a bug. Before you continue, please:
-        - Check the [FAQ](https://github.com/eugeniughelbur/obsidian-second-brain#faq) — many issues are answered there.
-        - Search [open + closed issues](https://github.com/eugeniughelbur/obsidian-second-brain/issues?q=is%3Aissue) — someone may have hit the same bug.
+        - Check the [FAQ](https://github.com/andyluu98/ces-second-brain#faq) — many issues are answered there.
+        - Search [open + closed issues](https://github.com/andyluu98/ces-second-brain/issues?q=is%3Aissue) — someone may have hit the same bug.
 
   - type: dropdown
     id: command

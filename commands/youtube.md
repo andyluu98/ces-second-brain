@@ -2,11 +2,11 @@
 description: Trích transcript, metadata, top comments từ video YouTube — tổng hợp qua Grok rồi lưu vào vault
 ---
 
-Use the obsidian-second-brain skill. Execute `/youtube [url]`:
+Use the ces-second-brain skill. Execute `/youtube [url]`:
 
 1. Resolve the YouTube URL or video ID from the user's argument. Accept any of: full URL (`https://www.youtube.com/watch?v=...`), `https://youtu.be/...`, `https://www.youtube.com/shorts/...`, or just the 11-character video ID. If no input given, ask: "Which YouTube video?"
 
-2. Run the Python command from the repo root (`~/Projects/personal/obsidian-second-brain/`):
+2. Run the Python command from the repo root (`~/Projects/personal/ces-second-brain/`):
    ```bash
    uv run -m scripts.research.youtube_extract "<url-or-id>"
    ```
@@ -42,6 +42,6 @@ Use the obsidian-second-brain skill. Execute `/youtube [url]`:
 - Tag values dùng tiếng Việt không dấu, kebab-case (vd: `quyet-dinh`, `du-an`, `nguoi`, `y-tuong`, `bai-hoc`).
 - Preamble dùng `## Cho Claude tương lai` thay cho `## For future Claude`.
 - Recency marker dạng VN: `(tính đến 2026-05, source.com)` thay cho `(as of 2026-05, source.com)`.
-- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`obsidian-second-brain`).
+- **Giữ nguyên (KHÔNG dịch):** tên file đã tồn tại, frontmatter keys (`date`, `tags`, `type`, `ai-first`, `status`, `timeline`), target của `[[wikilinks]]` đã có sẵn, URL nguồn nguyên văn, code block, command name (`/obsidian-save`), tên skill (`ces-second-brain`).
 - Khi tạo wikilink mới: tên hiển thị có thể VN (vd: `[[Anh Minh]]`, `[[Dự án X]]`).
 - Status values khi tạo mới: vẫn dùng giá trị chuẩn (`active`, `planning`, `completed`, `archived`, `on-hold`) để tương thích Dataview.
