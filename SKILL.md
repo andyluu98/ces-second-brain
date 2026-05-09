@@ -1,26 +1,12 @@
 ---
 name: ces-second-brain
-description: >
-  Operate any Obsidian vault as a living, self-rewriting second brain (an evolution
-  of Karpathy's LLM Wiki pattern: sources rewrite existing pages, contradictions
-  reconcile automatically, scheduled agents maintain the vault while you sleep).
-  Use this skill whenever
-  the user asks Claude to read, write, update, search, or manage their Obsidian
-  vault — including saving notes from conversation, creating daily entries, updating
-  kanban boards, logging dev work, managing people notes, capturing decisions,
-  tracking deals, or maintaining any vault structure. Also triggers when the user
-  wants to bootstrap a new vault from scratch, run a vault health check, or drop
-  a _CLAUDE.md into their vault so all Claude surfaces share the same operating rules.
-  Includes a research toolkit (5 commands: /x-read, /x-pulse, /research, /research-deep,
-  /youtube) for AI-powered research via Grok, Perplexity, and YouTube — findings save
-  to the vault automatically following the AI-first vault rule. Use proactively whenever
-  the conversation produces information worth preserving (decisions, people met, projects
-  started, tasks completed, lessons learned, research findings).
+description: Operate any Obsidian vault as a living, self-rewriting second brain. Use whenever the user asks Claude to read, write, update, search, or manage their Obsidian vault: save notes from conversation, create daily entries, update kanban boards, log dev work, manage people notes, capture decisions, track deals, or maintain any vault structure. Also triggers when the user bootstraps a new vault, runs a vault health check, or generates a _CLAUDE.md operating manual so all Claude surfaces share the same vault rules. Includes a research toolkit (/x-read, /x-pulse, /research, /research-deep, /youtube) powered by Grok, Perplexity, and YouTube; findings save to the vault following the AI-first rule (notes designed for future-Claude retrieval, not human reading). Use proactively whenever the conversation produces vault-worthy info: decisions made, people met, projects started, tasks completed, lessons learned, research findings.
+license: MIT
 ---
 
-# Obsidian Second Brain
+# ces second brain
 
-> Claude operates your Obsidian vault as a self-rewriting knowledge base. An evolution of [Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f): sources rewrite existing pages instead of just appending, contradictions reconcile automatically, and scheduled agents maintain the vault while you sleep.
+> Claude operates your Obsidian vault as a self-rewriting knowledge base. Sources rewrite existing pages instead of just appending, contradictions reconcile automatically, and scheduled agents maintain the vault while you sleep.
 > Everything worth remembering gets saved. Every update propagates everywhere it belongs.
 
 ---

@@ -126,24 +126,43 @@ Cần API key (xAI Grok + Perplexity + YouTube tùy chọn). Kết quả lưu v�
 
 ## Cài đặt
 
-**Người dùng phổ thông:** xem **[docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)** — hướng dẫn từng bước, không cần biết tech.
+**Cài được trên 3 nền tảng Claude.** Skill tuân thủ [Anthropic Agent Skills Spec](https://www.anthropic.com/news/agent-skills) — đặt vào đúng chỗ là chạy.
 
-**Power user:** một dòng:
+### Cách 1 — Claude Desktop / Claude.ai (upload zip)
+
+1. Tải zip: https://github.com/andyluu98/ces-second-brain/archive/refs/heads/main.zip
+2. Giải nén. Đổi tên folder `ces-second-brain-main` → `ces-second-brain` (quan trọng — phải khớp `name` trong SKILL.md).
+3. Nén lại thành `ces-second-brain.zip`.
+4. Mở Claude Desktop hoặc claude.ai → **Settings → Capabilities → Skills → Upload skill** → chọn file zip.
+5. Restart Claude. Gõ `/` để thấy 31 lệnh.
+
+### Cách 2 — Claude Code / Claude Desktop (clone vào folder skills)
+
+```bash
+# macOS / Linux
+git clone https://github.com/andyluu98/ces-second-brain ~/.claude/skills/ces-second-brain
+
+# Windows (PowerShell)
+git clone https://github.com/andyluu98/ces-second-brain "$env:USERPROFILE\.claude\skills\ces-second-brain"
+```
+
+Restart Claude → skill auto-load từ `~/.claude/skills/`.
+
+### Cách 3 — One-liner (Mac/Linux)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/andyluu98/ces-second-brain/main/scripts/quick-install.sh | bash
 ```
 
-Hoặc clone thủ công:
+Script tự clone + setup hỏi đường dẫn vault.
 
-```bash
-git clone https://github.com/andyluu98/ces-second-brain ~/.claude/skills/ces-second-brain
-cd ~/.claude/skills/ces-second-brain
-python scripts/apply_vn_descriptions.py
-cp commands/*.md ~/.claude/commands/
-```
+### Sau khi cài (mọi cách)
 
-Sau đó: mở Claude Desktop, gõ `/obsidian-init`.
+1. Mở Claude → gõ `/obsidian-init` để tạo `_CLAUDE.md` cho vault hiện có.
+2. Hoặc bootstrap vault mới: `python scripts/bootstrap_vault.py --path ~/my-vault --name "Tên" --preset builder`.
+3. Đảm bảo Obsidian + plugin `Local REST API` chạy + `mcp-obsidian` config trong Claude Desktop (xem [docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)).
+
+**Người dùng phổ thông:** xem **[docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)** — hướng dẫn từng bước có ảnh, không cần biết tech.
 
 ---
 
