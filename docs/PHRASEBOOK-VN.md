@@ -1,8 +1,8 @@
-# Phrasebook — 30 câu nói tiếng Việt tự nhiên
+# Phrasebook — câu nói tiếng Việt tự nhiên
 
-> Không nhớ slash command? Cứ chat tự nhiên với Claude. Claude hiểu các câu sau và tự gọi đúng skill.
+> Không nhớ slash command? Cứ chat tự nhiên với Claude. Claude hiểu các câu sau và tự gọi đúng lệnh.
 
-> **Cách dùng:** mở Claude Desktop, copy câu cột giữa, paste vào chat. Hoặc gõ slash trực tiếp ở cột phải nếu nhớ.
+> **Cách dùng:** mở Claude, copy câu cột giữa, paste vào chat. Hoặc gõ slash trực tiếp ở cột phải nếu nhớ.
 
 ---
 
@@ -10,9 +10,9 @@
 
 | Nhu cầu | Câu nói tự nhiên VN | Slash tương đương |
 |---|---|---|
-| Lưu mọi thứ từ cuộc trò chuyện | "Lưu cuộc trò chuyện này vào vault" hoặc "Cất trữ thông tin trong cuộc trò chuyện này lại giúp tôi" | `/obsidian-save` |
+| Lưu mọi thứ từ cuộc trò chuyện | "Lưu cuộc trò chuyện này vào vault" | `/obsidian-save` |
 | Lưu một quyết định cụ thể | "Ghi quyết định vừa rồi vào vault, gắn vào dự án [X]" | `/obsidian-decide [X]` |
-| Lưu nhanh một ý tưởng | "Capture ý tưởng: [nội dung]" hoặc "Lưu nhanh ý tưởng này: ..." | `/obsidian-capture [nội dung]` |
+| Lưu nhanh một ý tưởng | "Capture ý tưởng: [nội dung]" | `/obsidian-capture [nội dung]` |
 | Lưu phiên dev/làm việc | "Log phiên làm việc này, tôi đang làm dự án [X]" | `/obsidian-log` |
 | Thêm task vào kanban | "Thêm task: [mô tả], hạn [ngày], ưu tiên cao" | `/obsidian-task [mô tả]` |
 | Lưu/cập nhật người | "Tạo note cho anh Minh — anh ấy là CTO của Acme, vừa gặp hôm nay" | `/obsidian-person Minh` |
@@ -22,8 +22,7 @@
 
 | Nhu cầu | Câu nói tự nhiên VN | Slash tương đương |
 |---|---|---|
-| Tạo daily note hôm nay | "Tạo note hôm nay" hoặc "Mở daily note cho hôm nay" | `/obsidian-daily` |
-| Xem daily note đã có gì chưa | "Hôm nay tôi đã ghi gì rồi?" | `/obsidian-daily` |
+| Tạo daily note hôm nay | "Tạo note hôm nay" | `/obsidian-daily` |
 | Bắt đầu phiên làm việc mới | "Tôi đang làm gì hôm qua tới giờ?" | `/obsidian-world` |
 
 ## Tìm kiếm và tổng kết
@@ -49,26 +48,15 @@
 
 | Nhu cầu | Câu nói tự nhiên VN | Slash tương đương |
 |---|---|---|
-| Nạp 1 video YouTube | "Nạp video này vào vault: [URL]" | `/obsidian-ingest [URL]` |
-| Nạp PDF | "Đọc và lưu PDF này vào vault: [đường dẫn]" | `/obsidian-ingest [path]` |
-| Nạp audio | "Transcribe và lưu audio này: [path]" | `/obsidian-ingest [path]` |
-| Nạp screenshot | "Đọc ảnh whiteboard này và tạo concept notes" | `/obsidian-ingest [path]` |
-
-## Research (cần API key)
-
-| Nhu cầu | Câu nói tự nhiên VN | Slash tương đương |
-|---|---|---|
-| Đọc 1 post X | "Phân tích post X này: [URL]" | `/x-read [URL]` |
-| Quét X xem trending | "Trên X, chủ đề [X] đang hot gì?" | `/x-pulse [X]` |
-| Research web | "Research giúp tôi về [chủ đề]" | `/research [chủ đề]` |
-| Research sâu, biết vault | "Research sâu [chủ đề], xem vault tôi đã biết gì rồi và chỉ tìm phần thiếu" | `/research-deep [chủ đề]` |
-| Tóm tắt YouTube | "Tóm tắt video YouTube này: [URL]" | `/youtube [URL]` |
+| Nạp 1 nguồn vào vault | "Nạp nội dung này vào vault: [URL hoặc text]" | `/obsidian-ingest` |
+| Nạp PDF | "Tôi paste nội dung PDF, hãy tạo các note vault" | `/obsidian-ingest` |
+| Nạp transcript | "Đây là transcript cuộc họp, hãy tạo notes" | `/obsidian-ingest` |
 
 ## Bảo trì vault
 
 | Nhu cầu | Câu nói tự nhiên VN | Slash tương đương |
 |---|---|---|
-| Audit vault | "Vault có vấn đề gì không, mâu thuẫn ở đâu?" | `/obsidian-health` |
+| Audit vault | "Vault có vấn đề gì không, mâu thuẫn ở đâu?" (paste index.md + log.md) | `/obsidian-health` |
 | Hòa giải mâu thuẫn | "Tìm các thông tin trái ngược trong vault và xử lý" | `/obsidian-reconcile` |
 | Tổng hợp tự động | "Quét vault và tự viết trang tổng hợp pattern mới" | `/obsidian-synthesize` |
 | Visualize vault | "Tạo canvas map cho vault tôi xem hình dạng" | `/obsidian-visualize` |
@@ -90,7 +78,7 @@
 2. **Càng cụ thể càng tốt** — "lưu quyết định về ngân sách Q3 vào dự án X" tốt hơn "lưu cái này".
 3. **Nếu Claude làm sai** — nói "không, ý tôi là [làm rõ]". Claude sửa.
 4. **Slash command vẫn nhanh hơn** — khi đã quen, gõ `/obsidian-save` nhanh hơn nói cả câu.
-5. **Vẫn được trộn** — "lưu cuộc trò chuyện này, tập trung vào quyết định về Q3" — Claude tự gọi `/obsidian-save` với context bạn vừa cho.
+5. **Trộn được** — "lưu cuộc trò chuyện này, tập trung vào quyết định về Q3" — Claude tự gọi `/obsidian-save` với context bạn vừa cho.
 
 ---
 

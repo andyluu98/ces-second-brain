@@ -26,10 +26,8 @@ EXCLUDE_DIRS = {
     "__pycache__",
     "node_modules",
     "plans",
-    "examples",
-    "_includes",
     "dist",
-    "media",
+    "scripts",  # build_release_zip.py is dev-only, no need in distributed skill
 }
 
 EXCLUDE_FILES = {

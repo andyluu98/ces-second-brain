@@ -1,15 +1,26 @@
 <h1 align="center">ces second brain</h1>
 
 <p align="center">
-  <strong>Second brain AI cá nhân — vault Obsidian tự cập nhật qua Claude Desktop.</strong><br/><br/>
-  <em>Mỗi nguồn mới CẬP NHẬT các trang đã có thay vì chỉ thêm trang mới. Mâu thuẫn tự hòa giải. Vault thông minh hơn trong khi bạn ngủ.</em><br/><br/>
-  <em>31 lệnh tiếng Việt · auto-tổng hợp · công cụ tư duy phản biện · research live từ X / web / YouTube · 4 agent định kỳ · 4 preset</em>
+  <strong>Second brain AI cá nhân — biến vault Obsidian thành tri thức tự cập nhật qua Claude.</strong><br/><br/>
+  <em>26 lệnh tiếng Việt · ghi note theo AI-first rule · phản biện ý tưởng · tổng hợp pattern · 4 preset cho 4 nghề</em>
 </p>
 
 <p align="center">
   <a href="docs/HUONG-DAN-CAI-DAT.md"><strong>Hướng dẫn cài đặt</strong></a> ·
-  <a href="docs/PHRASEBOOK-VN.md"><strong>Phrasebook (cách nói lệnh)</strong></a>
+  <a href="docs/PHRASEBOOK-VN.md"><strong>Phrasebook</strong></a> ·
+  <a href="https://github.com/andyluu98/ces-second-brain/releases/latest"><strong>Tải zip mới nhất</strong></a>
 </p>
+
+---
+
+## Cài 2 bước, chạy mọi nơi
+
+1. Tải `ces-second-brain.zip` ở [Releases](https://github.com/andyluu98/ces-second-brain/releases/latest)
+2. Mở Claude (claude.ai web / Claude Desktop / Claude Code) → **Settings → Capabilities → Skills → Upload skill** → chọn zip
+
+Xong. Gõ `/` trong chat → menu hiện 26 lệnh tiếng Việt.
+
+**Không cần:** Python, Node.js, Local REST API plugin, MCP config, API keys.
 
 ---
 
@@ -17,64 +28,35 @@
 
 Bạn dùng Claude mỗi ngày. Mỗi cuộc trò chuyện bắt đầu lại từ đầu. Bạn giải thích lại mọi thứ. Cuộc trò chuyện kết thúc. Mọi thứ biến mất.
 
-Bạn ghi chú trong Obsidian. Hàng trăm file. Chúng nằm im. Bạn ra cùng một quyết định hai lần vì quên đã quyết 6 tháng trước. Ý tưởng mục trong daily notes. Không ai nối các điểm.
+Bạn ghi chú trong Obsidian. Hàng trăm file. Chúng nằm im. Bạn ra cùng một quyết định hai lần vì quên đã quyết 6 tháng trước. Ý tưởng mục trong daily notes.
 
 **Hai công cụ mạnh. Hoàn toàn rời rạc.**
 
-ces second brain nối chúng lại.
+ces second brain nối chúng lại — qua chat thường, không cần plugin.
 
 ---
 
-## Làm gì
+## Skill làm gì
 
-| Lúc | Làm gì | Kết quả |
-|---|---|---|
-| Sau cuộc họp | `/obsidian-save` | Mọi quyết định/người/task/ý tưởng tự lưu đúng nơi |
-| Có voice memo | `/obsidian-ingest meeting.m4a` | Whisper transcribe → tách từng promise/action → phân phối khắp vault |
-| Chụp whiteboard | `/obsidian-ingest photo.png` | Đọc ảnh → tạo concept notes → liên kết project |
-| Có video hay | `/obsidian-ingest https://youtube.com/...` | Vault TỰ VIẾT LẠI — entity cập nhật, mâu thuẫn giải quyết |
-| Trước quyết định lớn | `/obsidian-challenge` | Vault tìm thất bại quá khứ và phản biện bằng chính lời bạn |
-| Bắt đầu ngày mới | `/obsidian-daily` | Lịch + việc trễ + thay đổi qua đêm vào note hôm nay |
-| Đi ngủ | (auto) | Agent đêm chạy 5 pha — đóng ngày, hòa giải, tổng hợp, chữa orphan, build index |
-| Đọc post X | `/x-read [url]` | Grok live → post + thread + sentiment + voices đáng theo dõi |
-| Cần research | `/research [topic]` | Perplexity Sonar Pro → báo cáo có trích dẫn |
-| Research sâu | `/research-deep [topic]` | Quét vault trước → chỉ lấp khoảng trống → cập nhật toàn vault |
+Khi user gõ `/obsidian-save` (hoặc nói tự nhiên "lưu cuộc trò chuyện này"), Claude:
 
-**Bạn không bao giờ phải mở Obsidian.** Mọi thứ qua Claude.
+1. Quét cuộc trò chuyện, rút ra mọi thứ đáng giữ — quyết định, người, task, ý tưởng
+2. Output các markdown notes ở đúng format AI-first (preamble, frontmatter, wikilinks, recency markers)
+3. Liệt kê notes nào cần update kèm theo (kanban, daily note, project note)
+4. User **copy markdown vào vault Obsidian** thủ công
+
+Không tự động ghi vault. Đổi lại: cài 1 phát chạy mọi nơi, không config gì.
 
 ---
 
-## 4 lớp kiến trúc
-
-```
-+------------------------------------------+
-|  LỚP 1: Vận hành (21 lệnh)               |
-|  Claude nhớ mọi thứ                       |
-+------------------------------------------+
-|  LỚP 2: Tư duy (4 lệnh)                  |
-|  Claude tư duy cùng bạn                   |
-+------------------------------------------+
-|  LỚP 3: Context Engine (1 lệnh)          |
-|  Claude biết bạn là ai                    |
-+------------------------------------------+
-|  LỚP 4: Research Toolkit (5 lệnh)        |
-|  Claude kéo kiến thức về                  |
-+------------------------------------------+
-|  LUÔN BẬT                                 |
-|  Background agent + 4 scheduled agents    |
-+------------------------------------------+
-```
-
----
-
-## 31 lệnh
+## 26 lệnh
 
 ### Vận hành — Claude nhớ
 
 | Lệnh | Làm gì |
 |---|---|
 | `/obsidian-save` | Lưu mọi thứ từ cuộc trò chuyện — quyết định, task, người, ý tưởng |
-| `/obsidian-ingest` | Drop URL/PDF/audio/screenshot vào → vault TỰ VIẾT LẠI 5-15 trang |
+| `/obsidian-ingest` | Drop URL/PDF/transcript/screenshot → vault tự viết lại 5-15 trang |
 | `/obsidian-synthesize` | Tự tìm pattern qua nhiều nguồn và viết trang tổng hợp |
 | `/obsidian-reconcile` | Tìm mâu thuẫn và giải quyết — vault duy trì sự thật của nó |
 | `/obsidian-export` | Snapshot JSON/markdown sạch để AI tool nào cũng đọc được |
@@ -93,7 +75,7 @@ ces second brain nối chúng lại.
 | `/obsidian-adr` | Decision record — vault biết vì sao nó được tổ chức như vậy |
 | `/obsidian-visualize` | Canvas map vault — nhìn thấy hình dạng second brain |
 | `/obsidian-learn` | Rà bài học vault, cắt cái cũ, làm nổi pattern đang sống |
-| `/obsidian-init` | Tạo `_CLAUDE.md`, `index.md`, `log.md` |
+| `/obsidian-init` | Tạo `_CLAUDE.md`, `index.md`, `log.md` cho vault |
 
 ### Tư duy — Claude tư duy cùng bạn
 
@@ -110,95 +92,38 @@ ces second brain nối chúng lại.
 |---|---|
 | `/obsidian-world` | Nạp danh tính + trạng thái với cấp độ token tăng dần (L0-L3) |
 
-### Research — Claude kéo kiến thức về
-
-Cần API key (xAI Grok + Perplexity + YouTube tùy chọn). Kết quả lưu vào `Research/` theo format AI-first.
-
-| Lệnh | Làm gì |
-|---|---|
-| `/x-read [url]` | Đọc sâu post X — post + thread + TL;DR + claims + sentiment + voices |
-| `/x-pulse [topic]` | Quét X xem chủ đề đang hot — themes, voices, hooks, ý tưởng post |
-| `/research [topic]` | Web research có trích dẫn — báo cáo + recency markers + câu hỏi mở |
-| `/research-deep [topic]` | Vault-first synthesis — chỉ lấp gap, lan tỏa update khắp People/Projects/Ideas |
-| `/youtube [url]` | Trích transcript + metadata + comments → AI-first summary |
-
 ---
 
-## Cài đặt
+## Cách "ra lệnh"
 
-**Cài được trên 3 nền tảng Claude.** Skill tuân thủ [Anthropic Agent Skills Spec](https://www.anthropic.com/news/agent-skills) — đặt vào đúng chỗ là chạy.
+Trên Claude (mọi surface), gõ `/` để mở menu skill → chọn lệnh. Menu hiển thị mô tả tiếng Việt.
 
-### Cách 1 — Claude Desktop / Claude.ai (upload zip)
+Nếu không nhớ tên, dùng [Phrasebook](docs/PHRASEBOOK-VN.md) — danh sách câu nói tự nhiên VN. Ví dụ thay vì nhớ `/obsidian-save`, có thể chỉ cần nói:
 
-1. Tải zip: https://github.com/andyluu98/ces-second-brain/archive/refs/heads/main.zip
-2. Giải nén. Đổi tên folder `ces-second-brain-main` → `ces-second-brain` (quan trọng — phải khớp `name` trong SKILL.md).
-3. Nén lại thành `ces-second-brain.zip`.
-4. Mở Claude Desktop hoặc claude.ai → **Settings → Capabilities → Skills → Upload skill** → chọn file zip.
-5. Restart Claude. Gõ `/` để thấy 31 lệnh.
-
-### Cách 2 — Claude Code / Claude Desktop (clone vào folder skills)
-
-```bash
-# macOS / Linux
-git clone https://github.com/andyluu98/ces-second-brain ~/.claude/skills/ces-second-brain
-
-# Windows (PowerShell)
-git clone https://github.com/andyluu98/ces-second-brain "$env:USERPROFILE\.claude\skills\ces-second-brain"
-```
-
-Restart Claude → skill auto-load từ `~/.claude/skills/`.
-
-### Cách 3 — One-liner (Mac/Linux)
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/andyluu98/ces-second-brain/main/scripts/quick-install.sh | bash
-```
-
-Script tự clone + setup hỏi đường dẫn vault.
-
-### Sau khi cài (mọi cách)
-
-1. Mở Claude → gõ `/obsidian-init` để tạo `_CLAUDE.md` cho vault hiện có.
-2. Hoặc bootstrap vault mới: `python scripts/bootstrap_vault.py --path ~/my-vault --name "Tên" --preset builder`.
-3. Đảm bảo Obsidian + plugin `Local REST API` chạy + `mcp-obsidian` config trong Claude Desktop (xem [docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)).
-
-**Người dùng phổ thông:** xem **[docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md)** — hướng dẫn từng bước có ảnh, không cần biết tech.
-
----
-
-## Cách "ra lệnh" trên Claude Desktop
-
-Trên Claude Desktop, gõ `/` để mở menu skill → chọn lệnh muốn chạy → menu hiển thị mô tả tiếng Việt.
-
-Nếu không nhớ tên lệnh, dùng [Phrasebook](docs/PHRASEBOOK-VN.md) — danh sách câu nói tự nhiên VN tương ứng từng lệnh.
-
-Ví dụ: thay vì nhớ `/obsidian-save`, có thể chỉ cần nói:
 > "Lưu cuộc trò chuyện này vào vault giúp tôi"
 
 Claude tự hiểu và chạy lệnh tương ứng.
 
 ---
 
-## Vault tự sống
+## Bộ note ra theo format AI-first
 
-Vault truyền thống là tủ hồ sơ. Bạn bỏ vào. Nó nằm im.
+Mọi note skill xuất ra đều theo `references/ai-first-rules.md`:
 
-ces second brain biến vault thành cỗ máy tự viết lại với mỗi input:
+- `## Cho Claude tương lai` preamble (2-3 câu tóm tắt)
+- Frontmatter giàu (`type`, `date`, `tags`, `ai-first: true`, ...)
+- Recency marker mỗi claim ngoài: `(tính đến 2026-05, source.com)`
+- `[[wikilinks]]` cho mỗi người/dự án/ý tưởng
+- URL nguồn nguyên văn
+- Confidence level: `stated | high | medium | speculation`
 
-- **Nạp nguồn** → trang đã có được viết lại, mâu thuẫn được giải quyết, pattern được tổng hợp
-- **Lưu cuộc trò chuyện** → entity, concept, decision phân phối khắp vault
-- **Hỏi câu hỏi** → Two-Output Rule: mỗi câu trả lời cũng cập nhật trang
-- **Sự kiện thay đổi** → bi-temporal facts theo dõi cả "khi nó đúng" lẫn "khi vault biết". Audit trail đầy đủ.
-- **Không làm gì** → background agent + scheduled agents tự duy trì khi bạn ngủ
-- **Đợi một tuần** → auto-synthesis tìm pattern xuyên nguồn và viết trang kết nối
-
-Vault sau một tuần khác hẳn vault bạn bắt đầu.
+Ý nghĩa: Claude tương lai (lần chat sau) đọc note dễ hiểu, dễ truy hồi, không lệ thuộc backlinks.
 
 ---
 
-## Chọn preset
+## Chọn preset (lúc bootstrap vault)
 
-Chọn role lúc bootstrap. Mỗi preset tạo cấu trúc folder, template, kanban riêng.
+Khi user gõ `/obsidian-init`, skill hỏi 3 câu rồi sinh `_CLAUDE.md` phù hợp.
 
 | Preset | Dành cho | Kanban style |
 |---|---|---|
@@ -213,32 +138,39 @@ Không chọn preset → vault general-purpose.
 
 ## FAQ ngắn
 
-**Có cần API key không?**
-Không cho 26 lệnh chính. Chỉ 5 lệnh research cần (xAI, Perplexity, YouTube tùy chọn). Không có key thì 5 lệnh đó tự degrade — show thông báo, không vỡ.
+**Skill có tự ghi vào vault Obsidian của tôi không?**
+Mặc định: KHÔNG. Skill xuất markdown ở chat, user copy paste vào vault. Đổi lại: cài 1 phát chạy mọi nơi, không cần plugin/config gì.
 
-**Có chạy trên Windows/Linux được không?**
-Vault commands chạy mọi nơi Claude chạy. Research toolkit có thể cần điều chỉnh path trên Windows.
+**Có cần API key không?**
+Không.
+
+**Có cần Python / Node.js không?**
+Không.
+
+**Có chạy trên Windows / Mac / Linux không?**
+Có. Chạy mọi nơi Claude chạy được — vì là pure markdown skill, không có script chạy local.
 
 **Có an toàn cho vault hiện có không?**
-Có. ces second brain không bao giờ xóa hay sửa note theo cách phá hoại nếu chưa xác nhận. Note cũ giữ nguyên. Note mới theo AI-first. `/obsidian-health` đánh dấu note tiền-AI-first để bạn cập nhật theo lịch của mình.
+Có. Skill không truy cập file của bạn. Chỉ đưa ra markdown. Bạn quyết định paste hay không.
 
 **Khác Notion AI / Mem chỗ nào?**
-Notion AI và Mem là SaaS đóng — họ giữ data. ces second brain lưu mọi thứ vào markdown local trong vault Obsidian, không vendor lock-in. AI ở **trên** data, không ở **sau** data.
-
-**Có chạy offline không?**
-Không. Claude API yêu cầu internet. Chỉ vault thì local.
+Notion AI và Mem là SaaS đóng — họ giữ data. Skill này không lưu data ở đâu — markdown ở chat, user kiểm soát hoàn toàn.
 
 ---
 
 ## Triết lý
 
-Hầu hết công cụ second brain biến bạn thành lao công.
+Hầu hết công cụ second brain biến bạn thành lao công — copy paste, format, tag tay.
 
-ces second brain đảo ngược. Bạn nghĩ, làm, nói. Claude lo memory. Rồi nó dùng memory đó để giúp bạn nghĩ tốt hơn — bề mặt cái bạn sẽ bỏ sót, phản biện cái bạn sẽ giả định, kết nối cái bạn sẽ không bao giờ link, tổng hợp pattern bạn không yêu cầu.
-
-Vault không lớn lên. Nó tiến hóa.
+ces second brain đảo ngược. Bạn nghĩ, làm, nói. Claude lo memory. Format AI-first chuẩn. Bạn chỉ paste vào vault.
 
 **Note của bạn là moat của bạn.**
+
+---
+
+## Người dùng phổ thông
+
+Xem [docs/HUONG-DAN-CAI-DAT.md](docs/HUONG-DAN-CAI-DAT.md) — hướng dẫn 1 trang, 5 phút.
 
 ---
 
